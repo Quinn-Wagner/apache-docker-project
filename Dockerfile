@@ -1,5 +1,7 @@
 FROM httpd:latest
 
-COPY ./basic-web-app/ /usr/local/apache2/htdocs/
+WORKDIR /usr/local/apache2/htdocs/
+
+COPY ./basic-web-app/ .
 
 EXPOSE 8080
